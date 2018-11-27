@@ -1,6 +1,6 @@
-const hShot = document.getElementsByClassName('.candidate');
-const fShot = document.getElementsByClassName('.candidateFamily');
-const vShot = document.getElementsByClassName('.voters');
+// const hShot = document.getElementsByClassName('.candidate');
+// const fShot = document.getElementsByClassName('.candidateFamily');
+// const vShot = document.getElementsByClassName('.voters');
 
 
 const candidate = {
@@ -108,11 +108,12 @@ const candidate = {
 
    
 
-    images:{
+    images:
+    {
 
-        headshot: hShot,
-        familyShot: fShot,
-        voters: vShot
+        headshot: "https://elizabethwarren.com/wp-content/uploads/2018/11/44735774332_d96e6f8271_o.jpg",
+        familyShot: "https://pbs.twimg.com/media/C0eBtDjUsAAcSn2.jpg",
+        voters: "https://pbs.twimg.com/media/C0eBtDjUsAAcSn2.jpg"
     },
 
     missonStatment:"Drawing on her experience successfully taking on the financial industry even in the face of fierce opposition from Wall Street and big corporations, Elizabeth has effectively fought to expose big banks, fraudulent lenders, and greedy for-profit colleges that have preyed on borrowers, students, members of the armed services, and taxpayers.  Her work has resulted in real accountability for executives at Wells Fargo who conspired to defraud customers, changed rules to help prevent taxpayer bailouts of Wall Street risk-takers, led to new laws to protect students from being ripped off by predatory institutions, and helped tens of thousands of people get their money back when they were scammed.",
@@ -124,15 +125,23 @@ const candidate = {
 }
 
 
-console.log(candidate.missonStatment);
+
+
+function changeCandidateInfo ( newInfo, key ) {
+
+    candidate.candidateInfo[key] = newInfo; 
+    
+    }
+
+console.log (candidate.candidateInfo);
+changeCandidateInfo("Monty Python" , "name");
+changeCandidateInfo("Eric", "nickname");
+changeCandidateInfo("District 12", "district");
+console.log (candidate.candidateInfo);
 
 
 
-// function updateInfo (){
 
-//     In this area you will be able to update the info Object.
-
-// }
 
 // function updateStance(){
 
