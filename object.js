@@ -133,27 +133,35 @@ function changeCandidateInfo ( newInfo, key ) {
     
     }
 
-console.log (candidate.candidateInfo);
 changeCandidateInfo("Monty Python" , "name");
 changeCandidateInfo("Eric", "nickname");
 changeCandidateInfo("District 12", "district");
-console.log (candidate.candidateInfo);
 
 
 
+ function updateStance (stanceInfo , key){
+
+  candidate.candidateStance[key] = stanceInfo;
+
+}
+
+updateStance("Nope" , "taxes");
+updateStance("More" , "jobs");
+updateStance("Bad" , "infrastructure");
+updateStance("Fix it" , "healthCare");
+updateStance("Bad" , "crime");
+
+console.log (candidate.candidateStance)
 
 
-// function updateStance(){
+function updateDonation( newDonate ){
+    
+    candidate.donationURL = newDonate;
 
-//   In this area you will be able to update the info Object.
+}
 
-// }
-
-// function updateDonation(){
-
-//     Update the donate URL.
-
-// }
+updateDonation("www.giveMoreMonies.us");
+console.log(candidate.donationURL)
 
 // function updateEventsCalendar(){
 
